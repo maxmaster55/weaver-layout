@@ -1,0 +1,26 @@
+[package]
+name = "weaver-layout"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+description = "A small flexbox and grid layout engine with spring-animated layout transitions"
+repository = "https://github.com/maxmaster55/weaver-layout"
+keywords = ["layout", "flexbox", "grid", "ui", "animation"]
+categories = ["gui", "graphics"]
+readme = "README.md"
+
+[features]
+default = []
+# Spring-animated layout transitions (FLIP) using the Weave motion engine.
+motion = ["dep:weave-core"]
+
+[dependencies]
+weave-core = { git = "https://github.com/maxmaster55/weave-motion", optional = true }
+
+[package.metadata.docs.rs]
+all-features = true
+
+[[example]]
+name = "transition"
+required-features = ["motion"]
