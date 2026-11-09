@@ -35,7 +35,7 @@ let bar = tree.node(
 );
 
 let layout = tree.compute(bar, Size::new(400.0, 800.0));
-println!("{:?}", layout[title]); // Rect { x: 56.0, y: 18.0, width: 276.0, height: 20.0 }
+println!("{:?}", layout[title]); // Rect { x: 56.0, y: 18.0, width: 288.0, height: 20.0 }
 ```
 
 You describe boxes with a `Style`, build a tree, and call `compute` with the
